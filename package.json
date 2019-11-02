@@ -3,15 +3,37 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@rematch/core": "^1.2.0",
+    "antd": "^3.24.3",
+    "axios": "^0.19.0",
+    "classnames": "^2.2.6",
+    "history": "^4.10.1",
+    "object-to-formdata": "^2.1.2",
+    "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.1.1",
+    "redux": "^4.0.4",
+    "seamless-immutable": "^7.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "cross-env REACT_APP_ENV=production react-app-rewired build",
+    "build-dev": "cross-env REACT_APP_ENV=development react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "p:component": "plop component",
+    "p:container": "plop container",
+    "p:model": "plop model"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn test"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +49,24 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@storybook/addon-actions": "^5.2.5",
+    "@storybook/addon-links": "^5.2.5",
+    "@storybook/addons": "^5.2.5",
+    "@storybook/react": "^5.2.5",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^6.0.3",
+    "customize-cra": "^0.8.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "husky": "^3.0.9",
+    "node-sass": "^4.13.0",
+    "plop": "^2.5.2",
+    "react-app-rewired": "^2.1.4",
+    "react-test-renderer": "^16.11.0",
+    "sass-loader": "^8.0.0"
   }
 }
