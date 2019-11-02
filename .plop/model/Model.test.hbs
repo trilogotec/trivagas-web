@@ -1,0 +1,19 @@
+import Immutable from 'seamless-immutable';
+import {{fileName}}Model from './{{fileName}}.model';
+
+
+const defaultState = Immutable({
+  count: 0,
+});
+
+describe("{{fileName}}Model model", () => {
+  it("reducer: my increment should do something", () => {
+    const payload = 10;
+    const expectState = { count: 10 };
+
+    store.dispatch.{{reducerName}}.increment(payload);
+
+    expect(store.getState().{{reducerName}}).toBe(expectState);
+    expect({{fileName}}Model.reducers.increment(defaultState, payload)).toEqual(expectState);
+  });
+});

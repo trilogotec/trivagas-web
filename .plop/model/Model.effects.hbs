@@ -1,0 +1,12 @@
+export const incrementAsync = dispatch => {
+  const { {{reducerName}} } = dispatch;
+
+  return async (payload, rootState) => {
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    {{reducerName}}.increment(rootState.{{reducerName}}.count + payload);
+  };
+}
+
+export default (dispatch) => ({
+  incrementAsync: incrementAsync(dispatch),
+});
