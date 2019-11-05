@@ -20,8 +20,8 @@ function generatorComponent(plop) {
       templateFile: '.plop/component/Component.test.hbs'
     }, {
       type: 'add',
-      path: 'src/components/{{name}}/{{name}}.styles.scss',
-      templateFile: '.plop/component/Component.module.hbs'
+      path: 'src/components/{{name}}/{{name}}.module.scss',
+      templateFile: '.plop/component/Component.styles.hbs'
     }]
   });
 }
