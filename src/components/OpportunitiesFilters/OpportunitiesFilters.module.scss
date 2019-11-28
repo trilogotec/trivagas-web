@@ -1,0 +1,51 @@
+@import '../../styles/theme.scss';
+
+.OpportunitiesFilters :global {
+  .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    border-radius: $border-radius-base;
+    background-color: $secundary-color;
+    padding: 15px;
+    color: $white;
+  }
+
+  .inputSearch {
+    flex: 1;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+
+    &::placeholder {
+      color: $white;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .iconSearch {
+    font-size: 25px;
+  }
+
+  .divider {
+    background-color: $white;
+    width: 1px;
+    height: 100%;
+    opacity: 0.2;
+    margin: 0 20px;
+  }
+
+  .selectContainer {
+    display: flex;
+    align-items: center;
+
+    .iconDown {
+      margin-left: 5px;
+    }
+  }
+}

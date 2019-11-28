@@ -1,0 +1,38 @@
+@import "../../styles/theme.scss";
+
+.LayoutImageHeader :global {
+  .image {
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .titleContainer {
+    text-align: center;
+  }
+
+  .title {
+    color: $white;
+    font-size: 45px;
+    margin-bottom: 0px;
+  }
+
+  .description {
+    color: $white;
+    font-weight: 200;
+  }
+
+  .main {
+    background-color: $background-color;
+  }
+
+  .content {
+    position: relative;
+    top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+}
