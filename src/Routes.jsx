@@ -4,6 +4,7 @@ import {
 } from 'react-router-dom';
 
 import Login from './containers/Login/Login';
+import OpportunitiesList from './containers/Opportunities/OpportunitiesList';
 
 import { history } from './helpers/history';
 
@@ -14,7 +15,7 @@ const RouteConfig = (props) => {
     <Router history={history}>
       <Switch>
         <Route path="/login" render={() => <Login />} />
-        <Route path="/" render={() => <Login />} />
+        <Route path="/" render={() => <OpportunitiesList />} />
       </Switch>
     </Router>
   );

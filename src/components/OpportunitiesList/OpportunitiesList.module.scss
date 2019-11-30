@@ -1,0 +1,15 @@
+.OpportunitiesList {
+}
+
+.ListContent {
+  width: 80%;
+
+  @media (max-width: 540px) {
+    width: 95%;
+  }
+}
+
+.FiltersContainer {
+  width: 100%;
+  margin-bottom: 15px;
+}

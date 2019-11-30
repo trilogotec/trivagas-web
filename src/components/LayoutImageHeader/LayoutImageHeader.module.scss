@@ -1,0 +1,40 @@
+@import "../../styles/theme.scss";
+
+.LayoutImageHeader {
+}
+
+.Image {
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TitleContainer {
+  text-align: center;
+}
+
+.Title {
+  color: $white;
+  font-size: 45px;
+  margin-bottom: 0px;
+}
+
+.Description {
+  color: $white;
+  font-weight: 200;
+}
+
+.Main {
+  background-color: $background-color;
+}
+
+.Content {
+  position: relative;
+  top: -40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
