@@ -1,5 +1,5 @@
 import { parseError } from '../../services/Http';
-import Opportunities from '../../services/Opportunities.service';
+import * as Opportunities from '../../services/Opportunities.service';
 
 export const findOpportunities = dispatch => {
   const { opportunitiesList } = dispatch;

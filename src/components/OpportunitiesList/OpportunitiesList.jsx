@@ -8,7 +8,12 @@ import OpportunityCard from '../OpportunityCard/OpportunityCard';
 
 import styles from './OpportunitiesList.module.scss';
 
-export default function OpportunitiesList() {
+export default function OpportunitiesList(props) {
+  const {
+    loading,
+    opportunities,
+  } = props;
+
   const optionsGrid = {
     gutter: 10,
     xs: 1,
@@ -34,10 +39,11 @@ export default function OpportunitiesList() {
           </div>
           <List
             grid={optionsGrid}
-            dataSource={[{}, {}, {}, {}, {}, {}]}
+            loading={loading}
+            dataSource={opportunities}
             renderItem={item => (
               <List.Item>
-                <OpportunityCard />
+                <OpportunityCard {...item} />
               </ List.Item>
             )}
           />
@@ -48,4 +54,7 @@ export default function OpportunitiesList() {
 }
 
 OpportunitiesList.defaultProps = {};
-OpportunitiesList.propTypes = {};
+OpportunitiesList.propTypes = {
+  loading: PropTypes.bool.isRequired,
+  opportunities: PropTypes.array.isRequired,
+};

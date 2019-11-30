@@ -1,7 +1,9 @@
 import axios from 'axios';
 // import buildFormData from 'object-to-formdata';
 import { message } from 'antd';
-import { baseURL } from '../config';
+import config from '../config';
+
+const { baseURL } = config;
 
 const Http = axios.create({
   baseURL: baseURL,
@@ -48,7 +50,7 @@ export function parseError(error) {
 
   if (error.response && error.response.data) {
     if (error.response.status && error.response.status === 400) {
-      if (error.response.data.type && error.response.data.type === EExceptionType.Alert) {
+      if (error.response.data.type && error.response.data.type === 1) {
         message.warning(parseErrorMessage(error.response.data));
       } else {
         message.info(parseErrorMessage(error.response.data));
