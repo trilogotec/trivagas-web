@@ -5,7 +5,7 @@ export function find() {
     company: {
       id: 1,
       avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/sindresorhus/128.jpg',
-      name: 'Trilogo',
+      name: 'Trivagas',
       region: 'Fortaleza, Ceará, Brasil',
     },
     title: 'UI/UX Designer',
