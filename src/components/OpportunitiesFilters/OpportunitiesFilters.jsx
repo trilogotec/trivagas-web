@@ -7,19 +7,19 @@ import styles from './OpportunitiesFilters.module.scss';
 export default function OpportunitiesFilters(props) {
   return (
     <div className={styles.OpportunitiesFilters}>
-      <div className="container">
-        <Icon className="iconSearch" type="search" />
+      <div className={styles.Container}>
+        <Icon className={styles.IconSearch} type="search" />
         <input
-          className="inputSearch"
+          className={styles.InputSearch}
           placeholder="Buscar trívagas por palavra-chave"
           allowClear
         />
-        <div className="selectContainer">
+        <div className={styles.SelectContainer}>
           <span className="selectTitle">Todos os tipos de trabalho</span>
           <Icon className="iconDown" type="down" />
         </div>
-        <span className="divider" />
-        <div className="selectContainer">
+        <span className={styles.Divider} />
+        <div className={styles.SelectContainer}>
           <span className="selectTitle">Tds. campos de atuação</span>
           <Icon className="iconDown" type="down" />
         </div>

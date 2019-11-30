@@ -15,7 +15,7 @@ export default function OpportunityCard(props) {
   return (
     <div className={styles.OpportunityCard}>
       
-      <div className="header">
+      <div className={styles.Header}>
         <img className="avatar" src={company.avatar} />
         <div className="headerContent">
           <div className="title">{company.name}</div>
@@ -26,12 +26,12 @@ export default function OpportunityCard(props) {
         </div>
       </div>
 
-      <div className="main">
+      <div className={styles.Main}>
         <div className="title">{title}</div>
         <div className="description">{description}</div>
       </div>
 
-      <div className="footer">
+      <div className={styles.Footer}>
         <div className="info">
           <Icon className="icon" type="book" />
           <span>{workType}</span>

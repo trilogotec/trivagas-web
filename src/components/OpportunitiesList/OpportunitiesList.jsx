@@ -31,8 +31,8 @@ export default function OpportunitiesList(props) {
         title="Encontre trabalhos"
         description="Descubra seu próximo passo profissional, trabalho, frellance ou estágio."
       >
-        <div className="opportunitiesListContent">
-          <div className='opportunitiesFiltersContainer'>
+        <div className={styles.ListContent}>
+          <div className={styles.FiltersContainer}>
             <OpportunitiesFilters
 
             />

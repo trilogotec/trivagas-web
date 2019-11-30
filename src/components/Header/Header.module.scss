@@ -7,28 +7,34 @@
   position: relative;
   max-height: 86px;
 
-  .logo {
-    font-weight: bold;
-    color: $white;
-    letter-spacing: 1.2px;
-  }
-
-  .actionsContainer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
   .anticon {
     color: $white;
   }
+}
 
-  .userInfos {
-    .userImg {
-      margin-left: 8px;
-      width: 26px;
-      height: 26px;
-      border-radius: 13px;
-    }
-  }
+.Logo {
+  font-weight: bold;
+  color: $white;
+  letter-spacing: 1.2px;
+}
+
+.ActionsContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.UserInfos {
+  
+}
+
+.UserImg {
+  margin-left: 8px;
+  width: 26px;
+  height: 26px;
+  border-radius: 13px;
+}
+
+.UserMenuDropdownOptions {
+
 }

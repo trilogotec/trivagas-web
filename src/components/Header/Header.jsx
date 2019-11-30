@@ -7,7 +7,7 @@ import userDefault from '../../assets/images/user_default.jpg';
 
 export default function Header() {
   const userDropdownOptions = (
-    <Menu className="userMenuDropdownOptions">
+    <Menu className={styles.UserMenuDropdownOptions}>
       <Menu.Item key="1">
         <span>Perfil</span>
       </Menu.Item>
@@ -22,15 +22,15 @@ export default function Header() {
       <Row type="flex" justify="end" align="middle">
 
         <Col span={20}>
-          <span className="logo">Trivagas</span>
+          <span className={styles.Logo}>Trivagas</span>
         </Col>
         
         <Col span={4}>
-          <div className="actionsContainer">
+          <div className={styles.ActionsContainer}>
             <Icon type="bell" theme="filled" />
             <Dropdown overlay={userDropdownOptions}>
-              <div className="userInfos">
-                <img src={userDefault} alt="user avatar" className="userImg" />
+              <div className={styles.UserInfos}>
+                <img src={userDefault} alt="user avatar" className={styles.UserImg} />
               </div>
             </Dropdown>
           </div>
