@@ -1,12 +1,22 @@
-export const incrementAsync = dispatch => {
+import { parseError } from '../../services/Http';
+import Opportunities from '../../services/Opportunities.service';
+
+export const findOpportunities = dispatch => {
   const { opportunitiesList } = dispatch;
 
   return async (payload, rootState) => {
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    opportunitiesList.increment(rootState.opportunitiesList.count + payload);
+    try {
+      opportunitiesList.startLoading();
+      const response = await Opportunities.find();
+      opportunitiesList.setOpportunities(response);  
+    } catch(err) {
+      parseError(err);
+    } finally {
+      opportunitiesList.stopLoading();
+    }
   };
 }
 
 export default (dispatch) => ({
-  incrementAsync: incrementAsync(dispatch),
+  findOpportunities: findOpportunities(dispatch),
 });

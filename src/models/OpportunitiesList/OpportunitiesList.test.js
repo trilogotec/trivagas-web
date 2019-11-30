@@ -2,14 +2,32 @@ import Immutable from 'seamless-immutable';
 import OpportunitiesListModel from './OpportunitiesList.model';
 
 const defaultState = Immutable({
-  count: 0,
+  loading: false,
+  opportunities: [],
 });
 
 describe("OpportunitiesListModel model", () => {
-  it("reducer: my increment should do something", () => {
-    const payload = 10;
-    const expectState = { count: 10 };
+  it('should handle startLoading', () => {
+    const expectedState = defaultState
+      .set('loading', true);
 
-    expect(OpportunitiesListModel.reducers.increment(defaultState, payload)).toEqual(expectState);
+    expect(OpportunitiesListModel.reducers.startLoading(defaultState)).toEqual(expectedState);
+  });
+
+  it('should handle stopLoading', () => {
+    const state = defaultState.set('loading', true);
+    const expectedState = defaultState.set('loading', false);
+
+    expect(OpportunitiesListModel.reducers.stopLoading(state)).toEqual(expectedState);
+  });
+
+  it('should handle setOpportunities', () => {
+    const payload = [{
+      id: 1,
+      title: 'title',
+    }];
+    const expectedState = defaultState.set('opportunities', payload);
+    
+    expect(OpportunitiesListModel.reducers.setOpportunities(defaultState, payload)).toEqual(expectedState);
   });
 });

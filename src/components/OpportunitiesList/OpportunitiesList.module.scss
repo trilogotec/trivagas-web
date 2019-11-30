@@ -1,3 +1,11 @@
-.OpportunitiesList {
-  
+.OpportunitiesList :global {
+
+  .opportunitiesListContent {
+    width: 80%;
+  }
+
+  .opportunitiesFiltersContainer {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 }

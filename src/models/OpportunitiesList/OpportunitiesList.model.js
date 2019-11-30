@@ -3,10 +3,13 @@ import configureEffect from './OpportunitiesList.effects';
 
 export default {
   state: Immutable({
-    count: 0,
+    loading: false,
+    opportunities: [],
   }),
   reducers: {
-    increment: (state, payload) => state.set('count', state.count + payload)
+    startLoading: state => state.set('loading', true),
+    stopLoading: state => state.set('loading', false),
+    setOpportunities: (state, opportunities) => state.set('opportunities', opportunities),
   },
   effects: configureEffect,
 };

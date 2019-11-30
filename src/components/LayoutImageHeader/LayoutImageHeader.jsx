@@ -12,14 +12,14 @@ export default function LayoutImageHeader(props) {
 
   return (
     <div className={styles.LayoutImageHeader}>
-      <div className='image' style={{ backgroundImage: `url(${src})` }}>
-        <div className="titleContainer">
-          <h1 className="title">{title}</h1>
-          <h2 className="description">{description}</h2>
+      <div className={styles.Image} style={{ backgroundImage: `url(${src})` }}>
+        <div className={styles.TitleContainer}>
+          <h1 className={styles.Title}>{title}</h1>
+          <h2 className={styles.Description}>{description}</h2>
         </div>
       </div>
-      <div className="main">
-        <div className="content">
+      <div className={styles.Main}>
+        <div className={styles.Content}>
           {children}
         </div>
       </div>

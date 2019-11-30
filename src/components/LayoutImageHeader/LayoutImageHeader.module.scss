@@ -1,38 +1,40 @@
 @import "../../styles/theme.scss";
 
-.LayoutImageHeader :global {
-  .image {
-    height: 250px;
-    width: 100%;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.LayoutImageHeader {
+}
 
-  .titleContainer {
-    text-align: center;
-  }
+.Image {
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .title {
-    color: $white;
-    font-size: 45px;
-    margin-bottom: 0px;
-  }
+.TitleContainer {
+  text-align: center;
+}
 
-  .description {
-    color: $white;
-    font-weight: 200;
-  }
+.Title {
+  color: $white;
+  font-size: 45px;
+  margin-bottom: 0px;
+}
 
-  .main {
-    background-color: $background-color;
-  }
+.Description {
+  color: $white;
+  font-weight: 200;
+}
 
-  .content {
-    position: relative;
-    top: -40px;
-    display: flex;
-    justify-content: center;
-  }
+.Main {
+  background-color: $background-color;
+}
+
+.Content {
+  position: relative;
+  top: -40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
