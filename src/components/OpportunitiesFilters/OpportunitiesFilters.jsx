@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon, Dropdown } from 'antd';
+import { useMediaQuery } from 'react-responsive'
 
 import styles from './OpportunitiesFilters.module.scss';
 
 export default function OpportunitiesFilters(props) {
+  const isMobile = useMediaQuery({ maxWidth: 540 });
+
   return (
     <div className={styles.OpportunitiesFilters}>
       <div className={styles.Container}>
@@ -14,15 +17,20 @@ export default function OpportunitiesFilters(props) {
           placeholder="Buscar trívagas por palavra-chave"
           allowClear
         />
-        <div className={styles.SelectContainer}>
-          <span className="selectTitle">Todos os tipos de trabalho</span>
-          <Icon className="iconDown" type="down" />
-        </div>
-        <span className={styles.Divider} />
-        <div className={styles.SelectContainer}>
-          <span className="selectTitle">Tds. campos de atuação</span>
-          <Icon className="iconDown" type="down" />
-        </div>
+
+        {!isMobile && (
+          <>
+            <div className={styles.SelectContainer}>
+              <span className="selectTitle">Todos os tipos de trabalho</span>
+              <Icon className="iconDown" type="down" />
+            </div>
+            <span className={styles.Divider} />
+            <div className={styles.SelectContainer}>
+              <span className="selectTitle">Tds. campos de atuação</span>
+              <Icon className="iconDown" type="down" />
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
