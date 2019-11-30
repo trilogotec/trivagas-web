@@ -26,8 +26,26 @@ export default function OpportunityDetails() {
             </span>
             <button className="opportunityApplyButton">Cadastrar-se</button>
           </div>
-          <div className="opportunityDetailsCollumn">
-            oi
+          <div className="opportunityDetailsCard">
+            <div className="attributeSession">
+              <div className="attributeName">Tipo de trabalho</div>
+              <div className="attributeValue">Full Time</div>
+            </div>
+
+            <div className="attributeSession">
+              <div className="attributeName">Tipo de trabalho</div>
+              <div className="attributeValue">Full Time</div>
+            </div>
+
+            <div className="attributeSession">
+              <div className="attributeName">Tipo de trabalho</div>
+              <div className="attributeValue">Full Time</div>
+            </div>
+
+            <div className="attributeSession">
+              <div className="attributeName">Tipo de trabalho</div>
+              <div className="attributeValue">Full Time</div>
+            </div>
           </div>
         </div>
 

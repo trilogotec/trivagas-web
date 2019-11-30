@@ -21,8 +21,9 @@
     .opportunityDetailsBody{
       display: flex;
       margin-top: 10px;
-
+      
       .opportunityDescription{
+        width: 90%;
         display: flex;
         flex-direction: column;
         border-right: 1px solid black;
@@ -37,7 +38,21 @@
         background-color: #008D7B;
         color: white;
       }
+    }
 
+    .opportunityDetailsCard{
+
+      .attributeSession{
+        margin-bottom: 10px;
+        display: block;
+        
+        .attributeName{
+          font-weight: 200;
+        }
+        .attributeValue{
+          font-weight: 900;
+        }
+      }
     }
   }
 }
