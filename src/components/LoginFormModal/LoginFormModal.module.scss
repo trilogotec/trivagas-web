@@ -1,0 +1,52 @@
+@import "../../styles/theme.scss";
+
+.LoginFormModal {
+  
+}
+
+.LoginInput {
+  margin-bottom: 20px;
+}
+
+.PasswordInput {
+  margin-bottom: 20px;
+}
+
+.SettingsContainer {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Link {
+  color: $link-color;
+  text-decoration: underline;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.Enter {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.RegisterContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.IconsContainer :global {
+  display: flex;
+  align-items: center;
+
+  .anticon {
+    font-size: 18px;
+    color: $secundary-color;
+  }
+}
+
+.Divider {
+  display: inline-block;
+  width: 10px;
+}
