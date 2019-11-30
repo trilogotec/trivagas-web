@@ -14,7 +14,7 @@ export default function OpportunitiesFilters(props) {
         <Icon className={styles.IconSearch} type="search" />
         <input
           className={styles.InputSearch}
-          placeholder="Buscar trívagas por palavra-chave"
+          placeholder="Buscar trivagas por palavra-chave"
           allowClear
         />
 

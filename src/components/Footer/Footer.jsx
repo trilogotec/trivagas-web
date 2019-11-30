@@ -5,7 +5,7 @@ import styles from './Footer.module.scss';
 export default function Footer() {
   return (
     <div className={styles.Footer}>
-      <span>Trívagas® 2019</span>
+      <span>Trivagas® 2019</span>
     </div>
   );
 }
