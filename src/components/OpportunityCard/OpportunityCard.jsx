@@ -10,7 +10,7 @@ export default function OpportunityCard() {
       <div className="header">
         <img className="avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/adityasutomo/128.jpg" />
         <div className="headerContent">
-          <div className="title">Trilogo</div>
+          <div className="title">Trivagas</div>
           <div className="location">Fortaleza, Ceara, Brasil</div>
         </div>
         <div className="headerAction">
