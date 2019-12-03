@@ -1,25 +1,16 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import OpportunityDetails from './OpportunityDetails';
+import Http from './Http';
 
-const defaultProps = {
-  loading: false,
-  data: {
+export function find() {
+  return Promise.resolve({
     company: {
       id: 1,
-      avatar: '',
-      name: '',
-      region: '',
+      avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/sindresorhus/128.jpg',
+      name: 'Trivagas',
+      region: 'Fortaleza, Ceará, Brasil',
     },
-    title: '',
+    title: 'UI/UX Designer',
     description: 'DailyRounds is Indias largest Doctor network. (Think StackOverflow for Doctors) Over 500,000+ Doctors, nurses and other healthcare practitioners DailyRounds is Indias largest Doctor network. (Think StackOverflow for Doctors) Over 500,000+ Doctors, nurses and other healthcare practitioners',
     workType: 'Full time',
     createdAt: 'Há um dia',
-  },
-};
-
-describe('Testing OpportunityDetails Component', () => {
-  it('renders without crashing', () => {
-    shallow(<OpportunityDetails {...defaultProps} />);
   });
-});
+}
