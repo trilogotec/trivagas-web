@@ -26,7 +26,7 @@
         width: 90%;
         display: flex;
         flex-direction: column;
-        border-right: 1px solid black;
+        border-right: 1px solid #F5F5F5;
         padding: 20px;
         margin-right: 20px;
       }
@@ -42,6 +42,7 @@
     }
 
     .opportunityDetailsCard{
+      margin-top: 20px;
 
       .attributeSession{
         margin-bottom: 10px;
