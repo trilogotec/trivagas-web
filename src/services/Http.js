@@ -7,7 +7,7 @@ const { baseURL } = config;
 
 const Http = axios.create({
   baseURL: baseURL,
-  timeout: 10000, 
+  timeout: 10000,
 });
 
 function get(url, config) {
