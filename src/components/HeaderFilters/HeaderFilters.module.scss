@@ -1,0 +1,67 @@
+@import '../../styles/theme.scss';
+
+.HeaderFilters {
+}
+
+.Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+}
+
+.InputSearch {
+  height: 40px;
+  margin: 5px;
+
+  input {
+    background: $background-color;
+    color: $primary-color;
+    border: none;
+
+    &::placeholder {
+      color: $primary-color;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .IconSearch {
+    color: $primary-color;
+  }
+}
+
+.ButtonSearch {
+  height: 40px;
+  margin: 5px;
+  font-size: 14px;
+  background-color: $secundary-color;
+  color:#FFF;
+  border: none;
+  padding: 0 13px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.Divider {
+  background-color: $white;
+  width: 1px;
+  height: 100%;
+  opacity: 0.2;
+  margin: 0 20px;
+}
+
+.SelectContainer :global{
+  display: flex;
+  align-items: center;
+
+  .iconDown {
+    margin-left: 5px;
+  }
+}

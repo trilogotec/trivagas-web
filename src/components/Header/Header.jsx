@@ -4,6 +4,7 @@ import { Row, Col, Icon, Dropdown, Menu } from 'antd';
 
 import styles from './Header.module.scss';
 import userDefault from '../../assets/images/user_default.jpg';
+import HeaderFilters from '../HeaderFilters/HeaderFilters';
 
 export default function Header() {
   const userDropdownOptions = (
@@ -21,11 +22,15 @@ export default function Header() {
     <div className={styles.Header}>
       <Row type="flex" justify="end" align="middle">
 
-        <Col span={20}>
+        <Col span={8}>
           <span className={styles.Logo}>Trivagas</span>
         </Col>
+
+        <Col span={8}>
+          <HeaderFilters />
+        </Col>
         
-        <Col span={4}>
+        <Col span={8}>
           <div className={styles.ActionsContainer}>
             <Icon type="bell" theme="filled" />
             <Dropdown overlay={userDropdownOptions}>

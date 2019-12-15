@@ -7,9 +7,8 @@ export const findOpportunities = dispatch => {
   return async (payload, rootState) => {
     try {
       opportunitiesList.startLoading();
-      const response = await Opportunities.getOpportunities();
-      console.log(response.data);
-      // opportunitiesList.setOpportunities(response);  
+      const response = await Opportunities.find();
+      opportunitiesList.setOpportunities(response);  
     } catch(err) {
       parseError(err);
     } finally {
