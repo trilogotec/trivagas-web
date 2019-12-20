@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon, Input } from 'antd';
+import { Icon, Input, Button } from 'antd';
 import { useMediaQuery } from 'react-responsive'
 
 import styles from './HeaderFilters.module.scss';
@@ -16,12 +16,9 @@ export default function HeaderFilters(props) {
           placeholder="Buscar trivagas por palavra-chave"
           prefix={<Icon className={styles.IconSearch} type="search" />}
         />
-        <button
-          className={styles.ButtonSearch}
-          size="large"
-        >
+        <Button type="primary" className={styles.ButtonSearch}>
           Pesquisar
-        </button>
+        </Button>
       </div>
     </div>
   );

@@ -8,7 +8,6 @@ import createStore from './models/createStore';
 import App from './App';
 
 import './styles/app.scss';
-import 'antd/dist/antd.css';
 
 const { store } = createStore();
 

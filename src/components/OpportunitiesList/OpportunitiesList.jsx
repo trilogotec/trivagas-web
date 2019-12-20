@@ -27,7 +27,7 @@ export default function OpportunitiesList(props) {
                 renderItem={item => (
                   <List.Item>
                     <OpportunityCard {...item} />
-                  </ List.Item>
+                  </List.Item>
                 )}
               />
             </Col>

@@ -11,13 +11,14 @@
 }
 
 .InputSearch {
-  height: 40px;
+  height: 45px;
   margin: 5px;
 
   input {
     background: $background-color;
     color: $primary-color;
     border: none;
+    padding-left: 40px !important;
 
     &::placeholder {
       color: $primary-color;
@@ -34,19 +35,8 @@
 }
 
 .ButtonSearch {
-  height: 40px;
-  margin: 5px;
-  font-size: 14px;
-  background-color: $secundary-color;
-  color:#FFF;
-  border: none;
-  padding: 0 13px;
-  border-radius: 4px;
-  cursor: pointer;
-
-  &:hover {
-    opacity: 0.9;
-  }
+  margin-left: 10px;
+  height: 45px !important;
 }
 
 .Divider {
