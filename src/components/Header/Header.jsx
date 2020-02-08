@@ -8,6 +8,12 @@ import userDefault from '../../assets/images/user_default.jpg';
 const { Option } = Select;
 
 export default function Header(props) {
+  const {
+    onSearchFieldChange,
+    onLocationChange,
+    onSearch,
+  } = props;
+
   const userDropdownOptions = (
     <Menu className={styles.UserMenuDropdownOptions}>
       <Menu.Item key="1">
@@ -34,16 +40,17 @@ export default function Header(props) {
                 className={styles.Input}
                 placeholder="Buscar trivagas"
                 prefix={<Icon type="search" style={{ color: 'rgba(0,0,0,.25)' }} />}
+                onChange={(e) => onSearchFieldChange(e.target.value)}
               />
             </Col>
             <Col span={10}>
-              <Select className={styles.SelectLocation} defaultValue="CE" onChange={() => { }}>
+              <Select className={styles.SelectLocation} defaultValue="CE" onChange={onLocationChange}>
                 <Option value="" disabled>Pesquisar localidade</Option>
                 <Option value="CE">Ceará</Option>
               </Select>
             </Col>
             <Col span={4}>
-              <Button className={styles.Button} type="primary">
+              <Button className={styles.Button} type="primary" onClick={onSearch}>
                 Pesquisar
               </Button>
             </Col>
@@ -67,4 +74,8 @@ export default function Header(props) {
 }
 
 Header.defaultProps = {};
-Header.propTypes = {};
+Header.propTypes = {
+  onSearchFieldChange: PropTypes.func.isRequired,
+  onLocationChange: PropTypes.func.isRequired,
+  onSearch: PropTypes.func.isRequired,
+};
