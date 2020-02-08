@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Icon } from 'antd';
 import styles from './OpportunityDetails.module.scss';
-import LayoutImageHeader from '../LayoutImageHeader/LayoutImageHeader';
 
 
 export default function OpportunityDetails(props) {
@@ -13,11 +12,6 @@ export default function OpportunityDetails(props) {
 
   return (
     <div className={styles.OpportunityDetails}>
-      <LayoutImageHeader
-        src={data.company.avatar}
-        title={data.title}
-        description={`${data.company.name} | ${data.company.region}`}
-      />
       <div className="opportunityDescriptionArea">
         <img className="logo" src="https://s3.amazonaws.com/uifaces/faces/twitter/adityasutomo/128.jpg" />
         <div className="opportunityDetailsBody">

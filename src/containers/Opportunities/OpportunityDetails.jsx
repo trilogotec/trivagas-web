@@ -21,13 +21,9 @@ export default function OpportunityDetailsContainer() {
   
   
   return (
-    <>
-      <Header />
-      <OpportunityDetails 
-        loading={loading}
-        data={data}
-      />
-      <Footer />
-    </>
+    <OpportunityDetails 
+      loading={loading}
+      data={data}
+    />
   );
 }
