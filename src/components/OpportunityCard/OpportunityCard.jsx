@@ -14,12 +14,34 @@ export default function OpportunityCard(props) {
 
   return (
     <div className={styles.OpportunityCard}>
-      
-      <div className={styles.Header}>
-        <img className="avatar" src={company.avatar} />
-        <div className="headerContent">
-          <div className="title">{company.name}</div>
+      <div className={styles.CompanyAvatar}>
+        <img className="avatar" src={company.avatar} alt={company.name} />
+      </div>
+
+      <div className={styles.Main}>
+        <div className='headerContent'>
+          <div className="title">
+            {title.length > 50 ? `${title.substring(0, 50)}...` : title}
+          </div>
+          <div className="companyName">{company.name}</div>
           <div className="location">{company.region}</div>
+        </div>
+
+        <div className='footer'>
+          <div className="info">
+            <Icon type="clock-circle" className="icon" />
+            <span>{workType}</span>
+          </div>
+          <div className="info">
+            <Icon type="calendar" className="icon" />
+            <span>{createdAt}</span>
+          </div>
+        </div>
+      </div>
+      
+      {/* <div className={styles.Header}>
+        <div className="headerContent">
+          
         </div>
         <div className="headerAction">
           <Icon type="heart" />
@@ -28,22 +50,13 @@ export default function OpportunityCard(props) {
 
       <div className={styles.Main}>
         <div className="title">{title}</div>
-        <div className="description">{description}</div>
       </div>
 
       <div className={styles.Footer}>
-        <div className="info">
-          <Icon className="icon" type="book" />
-          <span>{workType}</span>
-        </div>
-        <div className="info">
-          <Icon className="icon" type="calendar" />
-          <span>{createdAt}</span>
-        </div>
         <div className="info align-end">
           <Icon className="icon"type="ellipsis" />
         </div>
-      </div>
+      </div> */}
 
     </div>
   );

@@ -1,15 +1,14 @@
 .OpportunitiesList {
 }
 
-.ListContent {
-  width: 80%;
+.ListContent :global{
+  width: 30%;
 
   @media (max-width: 540px) {
     width: 95%;
   }
-}
 
-.FiltersContainer {
-  width: 100%;
-  margin-bottom: 15px;
+  .ant-list-item {
+    padding: 6px 0;
+  }
 }
