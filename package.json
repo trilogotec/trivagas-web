@@ -32,11 +32,6 @@
     "p:container": "plop container",
     "p:model": "plop model"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "yarn test:ci"
-    }
-  },
   "eslintConfig": {
     "extends": "react-app"
   },
